@@ -6,9 +6,15 @@
 //
 
 import UIKit
+//imported to store the details in the coredata
+import CoreData
 
 class CharacterViewController: UIViewController {
     
+    //temp variable which users want to see
+    var Name: String!
+    var Constellation: String!
+    var Vision: String!
     
     @IBOutlet weak var searchCharacterTextField: UITextField!
     
@@ -48,35 +54,55 @@ class CharacterViewController: UIViewController {
     }
     
     func fetchCharacterData(characterName: String) {
-        print(characterName)
-        let genshinURLString = "https://api.genshin.dev/characters/\(characterName.lowercased())"
-        let genshinURLStringPicture = "https://api.genshin.dev/characters/\(characterName.lowercased())/icon"
+        
+        //to replace space with -
+        let characterNameFormatted = characterName.lowercased().replacingOccurrences(of: " ", with: "-")
+        let genshinURLString = "https://api.genshin.dev/characters/\(characterNameFormatted)"
+        let genshinURLStringIcon = genshinURLString + "/card"
+
+        print(genshinURLString)
         
         //created url object
         let genshinURL = URL(string: genshinURLString)
-        let genshinURLPic = URL(string: genshinURLStringPicture)
+        let genshinURLIcon = URL(string: genshinURLStringIcon)
         
         //created request and passing the url object
         let genshinRequest = URLRequest(url: genshinURL!)
-        let genshinRequestPic = URLRequest(url: genshinURLPic!)
+        let genshinRequestPic = URLRequest(url: genshinURLIcon!)
         
         let task = URLSession.shared.dataTask(with: genshinRequest) { (data, response, error) in
             if error == nil {
                 // Parsing the JSON data
                 let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
+             
                 
-                if let name = jsonData["name"] as? String,
-                   let constellation = jsonData["constellation"] as? String,
-                   let vision = jsonData["vision"] as? String {
-                    
+                self.Name = jsonData["name"] as? String
+                self.Constellation = jsonData["constellation"] as? String
+                self.Vision = jsonData["vision"] as? String
+                
+                DispatchQueue.main.async { [self] in
+                    // Update UI on the main queue
+                    characterNameTextField.text = Name
+                    constellationTextField.text = Constellation
+                    visionTextField.text = Vision
+                }
+            }
+        }
+        task.resume()
+        
+        
+        //getting the character icon requires additional /icon in url
+        let pictureTask = URLSession.shared.dataTask(with: genshinRequestPic) {
+            (data, response, error)
+            in
+            if error == nil {
+                if let image = UIImage(data: data!) {
                     DispatchQueue.main.async {
-                        // Update UI on the main queue
-                        self.characterNameTextField.text = name
-                        self.constellationTextField.text = constellation
-                        self.visionTextField.text = vision
+                        self.characterImageView.image = image
                         self.hideElements(hidden: false)
                     }
-                } else {
+                }
+                else {
                     DispatchQueue.main.async {
                         self.hideElements(hidden: true)
                         // Show alert message on the main queue
@@ -85,26 +111,39 @@ class CharacterViewController: UIViewController {
                 }
             }
         }
-        
-        task.resume()
-        
-        
-        
-        let pictureTask = URLSession.shared.dataTask(with: genshinRequestPic) {
-            (data, response, error)
-            in
-            if error == nil {
-                let image = UIImage(data: data!)
-                
-                DispatchQueue.main.async {
-                    self.characterImageView.image = image
-                }
-            }
-        }
         pictureTask.resume()
-        
     }
     
+    
+    @IBAction func saveCharacterInfoButton(_ sender: UIButton) {
+//        //for coredata implementation
+//        let delegate = UIApplication.shared.delegate as! AppDelegate
+//        //object context to read and write in db
+//        let context = delegate.persistentContainer.viewContext
+//
+//        //for inserting new object
+//        //(forEntityName: "DatabaseName")
+//        let characterData = NSEntityDescription.insertNewObject(forEntityName: "Character", into:context) as! Character
+//        //assigning the values from the coredata to the variables
+//        characterData.name = Name
+//        flickrData.width = Width
+//        flickrData.title = Title
+//
+//        //saving image to binary form
+//        let imageData = imagePicView.image?.pngData()
+//        flickrData.pic = imageData
+//
+//        //saving it to db
+//        do {
+//            try context.save()
+//            print("Data inserted successfully!")
+//        }catch {
+//            print("Data insertion error")
+//        }
+    }
+    
+    
+    //MARK: other functions
     func hideElements (hidden: Bool) {
         characterNameLabel.isHidden = hidden
         characterNameTextField.isHidden = hidden
@@ -112,6 +151,7 @@ class CharacterViewController: UIViewController {
         visionTextField.isHidden = hidden
         constellationLabel.isHidden = hidden
         constellationTextField.isHidden = hidden
+        characterImageView.isHidden = hidden
     }
     
     func showMessage(message: String, buttonCaption: String, controller: UIViewController)

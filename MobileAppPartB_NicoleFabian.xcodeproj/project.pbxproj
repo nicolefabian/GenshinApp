@@ -15,6 +15,8 @@
 		BBC66D6F2A33EA25005DFC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC66D6E2A33EA25005DFC75 /* Assets.xcassets */; };
 		BBC66D722A33EA25005DFC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC66D702A33EA25005DFC75 /* LaunchScreen.storyboard */; };
 		BBC66D962A33EE91005DFC75 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC66D952A33EE91005DFC75 /* CharacterViewController.swift */; };
+		BBC66DA12A342DE8005DFC75 /* Character+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC66D9F2A342DE8005DFC75 /* Character+CoreDataClass.swift */; };
+		BBC66DA22A342DE8005DFC75 /* Character+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC66DA02A342DE8005DFC75 /* Character+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BBC66D782A33EA26005DFC75 /* MobileAppPartB_NicoleFabianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPartB_NicoleFabianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC66D822A33EA26005DFC75 /* MobileAppPartB_NicoleFabianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPartB_NicoleFabianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBC66D952A33EE91005DFC75 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+		BBC66D9F2A342DE8005DFC75 /* Character+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BBC66DA02A342DE8005DFC75 /* Character+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Character+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,8 @@
 		BBC66D612A33EA24005DFC75 /* MobileAppPartB_NicoleFabian */ = {
 			isa = PBXGroup;
 			children = (
+				BBC66D9F2A342DE8005DFC75 /* Character+CoreDataClass.swift */,
+				BBC66DA02A342DE8005DFC75 /* Character+CoreDataProperties.swift */,
 				BBC66D622A33EA24005DFC75 /* AppDelegate.swift */,
 				BBC66D642A33EA24005DFC75 /* SceneDelegate.swift */,
 				BBC66D662A33EA24005DFC75 /* ViewController.swift */,
@@ -239,7 +245,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BBC66DA22A342DE8005DFC75 /* Character+CoreDataProperties.swift in Sources */,
 				BBC66D6D2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodeld in Sources */,
+				BBC66DA12A342DE8005DFC75 /* Character+CoreDataClass.swift in Sources */,
 				BBC66D962A33EE91005DFC75 /* CharacterViewController.swift in Sources */,
 				BBC66D672A33EA24005DFC75 /* ViewController.swift in Sources */,
 				BBC66D632A33EA24005DFC75 /* AppDelegate.swift in Sources */,
