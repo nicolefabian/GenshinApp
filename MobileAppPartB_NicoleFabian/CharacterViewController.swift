@@ -29,6 +29,7 @@ class CharacterViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         // Hide labels and text fields
+        hideElements(hidden: true)
         
         
         
@@ -59,26 +60,34 @@ class CharacterViewController: UIViewController {
         let genshinRequest = URLRequest(url: genshinURL!)
         let genshinRequestPic = URLRequest(url: genshinURLPic!)
         
-        let task = URLSession.shared.dataTask(with: genshinRequest){
-            (data,response,error)
-            in
+        let task = URLSession.shared.dataTask(with: genshinRequest) { (data, response, error) in
             if error == nil {
-                //breaking down the api url
-                let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String:Any]
-                //print(jsonData)
-                let name = jsonData["name"] as! String
-                let constellation = jsonData["constellation"] as! String
-                let vision = jsonData["vision"] as! String
+                // Parsing the JSON data
+                let jsonData = try! JSONSerialization.jsonObject(with: data!, options: .allowFragments) as! [String: Any]
                 
-                DispatchQueue.main.async {
-                    // Update UI on the main queue
-                    self.characterNameTextField.text = name
-                    self.constellationTextField.text = constellation
-                    self.visionTextField.text = vision
+                if let name = jsonData["name"] as? String,
+                   let constellation = jsonData["constellation"] as? String,
+                   let vision = jsonData["vision"] as? String {
+                    
+                    DispatchQueue.main.async {
+                        // Update UI on the main queue
+                        self.characterNameTextField.text = name
+                        self.constellationTextField.text = constellation
+                        self.visionTextField.text = vision
+                        self.hideElements(hidden: false)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                        self.hideElements(hidden: true)
+                        // Show alert message on the main queue
+                        self.showMessage(message: "No matching character found", buttonCaption: "Please try again", controller: self)
+                    }
                 }
             }
         }
+        
         task.resume()
+        
         
         
         let pictureTask = URLSession.shared.dataTask(with: genshinRequestPic) {
@@ -93,7 +102,7 @@ class CharacterViewController: UIViewController {
             }
         }
         pictureTask.resume()
-
+        
     }
     
     func hideElements (hidden: Bool) {
