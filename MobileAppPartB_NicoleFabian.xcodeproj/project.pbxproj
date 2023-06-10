@@ -1,0 +1,594 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BBC66D632A33EA24005DFC75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC66D622A33EA24005DFC75 /* AppDelegate.swift */; };
+		BBC66D652A33EA24005DFC75 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC66D642A33EA24005DFC75 /* SceneDelegate.swift */; };
+		BBC66D672A33EA24005DFC75 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC66D662A33EA24005DFC75 /* ViewController.swift */; };
+		BBC66D6A2A33EA24005DFC75 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC66D682A33EA24005DFC75 /* Main.storyboard */; };
+		BBC66D6D2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BBC66D6B2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodeld */; };
+		BBC66D6F2A33EA25005DFC75 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBC66D6E2A33EA25005DFC75 /* Assets.xcassets */; };
+		BBC66D722A33EA25005DFC75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBC66D702A33EA25005DFC75 /* LaunchScreen.storyboard */; };
+		BBC66D962A33EE91005DFC75 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC66D952A33EE91005DFC75 /* CharacterViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBC66D792A33EA26005DFC75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC66D572A33EA24005DFC75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBC66D5E2A33EA24005DFC75;
+			remoteInfo = MobileAppPartB_NicoleFabian;
+		};
+		BBC66D832A33EA26005DFC75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBC66D572A33EA24005DFC75 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBC66D5E2A33EA24005DFC75;
+			remoteInfo = MobileAppPartB_NicoleFabian;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BBC66D5F2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppPartB_NicoleFabian.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBC66D622A33EA24005DFC75 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BBC66D642A33EA24005DFC75 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BBC66D662A33EA24005DFC75 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BBC66D692A33EA24005DFC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BBC66D6C2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MobileAppPartB_NicoleFabian.xcdatamodel; sourceTree = "<group>"; };
+		BBC66D6E2A33EA25005DFC75 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BBC66D712A33EA25005DFC75 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BBC66D732A33EA25005DFC75 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BBC66D782A33EA26005DFC75 /* MobileAppPartB_NicoleFabianTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPartB_NicoleFabianTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBC66D822A33EA26005DFC75 /* MobileAppPartB_NicoleFabianUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobileAppPartB_NicoleFabianUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBC66D952A33EE91005DFC75 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BBC66D5C2A33EA24005DFC75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC66D752A33EA26005DFC75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC66D7F2A33EA26005DFC75 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BBC66D562A33EA24005DFC75 = {
+			isa = PBXGroup;
+			children = (
+				BBC66D612A33EA24005DFC75 /* MobileAppPartB_NicoleFabian */,
+				BBC66D602A33EA24005DFC75 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BBC66D602A33EA24005DFC75 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BBC66D5F2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.app */,
+				BBC66D782A33EA26005DFC75 /* MobileAppPartB_NicoleFabianTests.xctest */,
+				BBC66D822A33EA26005DFC75 /* MobileAppPartB_NicoleFabianUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBC66D612A33EA24005DFC75 /* MobileAppPartB_NicoleFabian */ = {
+			isa = PBXGroup;
+			children = (
+				BBC66D622A33EA24005DFC75 /* AppDelegate.swift */,
+				BBC66D642A33EA24005DFC75 /* SceneDelegate.swift */,
+				BBC66D662A33EA24005DFC75 /* ViewController.swift */,
+				BBC66D682A33EA24005DFC75 /* Main.storyboard */,
+				BBC66D6E2A33EA25005DFC75 /* Assets.xcassets */,
+				BBC66D702A33EA25005DFC75 /* LaunchScreen.storyboard */,
+				BBC66D732A33EA25005DFC75 /* Info.plist */,
+				BBC66D6B2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodeld */,
+				BBC66D952A33EE91005DFC75 /* CharacterViewController.swift */,
+			);
+			path = MobileAppPartB_NicoleFabian;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BBC66D5E2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBC66D8C2A33EA26005DFC75 /* Build configuration list for PBXNativeTarget "MobileAppPartB_NicoleFabian" */;
+			buildPhases = (
+				BBC66D5B2A33EA24005DFC75 /* Sources */,
+				BBC66D5C2A33EA24005DFC75 /* Frameworks */,
+				BBC66D5D2A33EA24005DFC75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileAppPartB_NicoleFabian;
+			productName = MobileAppPartB_NicoleFabian;
+			productReference = BBC66D5F2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BBC66D772A33EA26005DFC75 /* MobileAppPartB_NicoleFabianTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBC66D8F2A33EA26005DFC75 /* Build configuration list for PBXNativeTarget "MobileAppPartB_NicoleFabianTests" */;
+			buildPhases = (
+				BBC66D742A33EA26005DFC75 /* Sources */,
+				BBC66D752A33EA26005DFC75 /* Frameworks */,
+				BBC66D762A33EA26005DFC75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBC66D7A2A33EA26005DFC75 /* PBXTargetDependency */,
+			);
+			name = MobileAppPartB_NicoleFabianTests;
+			productName = MobileAppPartB_NicoleFabianTests;
+			productReference = BBC66D782A33EA26005DFC75 /* MobileAppPartB_NicoleFabianTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BBC66D812A33EA26005DFC75 /* MobileAppPartB_NicoleFabianUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBC66D922A33EA26005DFC75 /* Build configuration list for PBXNativeTarget "MobileAppPartB_NicoleFabianUITests" */;
+			buildPhases = (
+				BBC66D7E2A33EA26005DFC75 /* Sources */,
+				BBC66D7F2A33EA26005DFC75 /* Frameworks */,
+				BBC66D802A33EA26005DFC75 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBC66D842A33EA26005DFC75 /* PBXTargetDependency */,
+			);
+			name = MobileAppPartB_NicoleFabianUITests;
+			productName = MobileAppPartB_NicoleFabianUITests;
+			productReference = BBC66D822A33EA26005DFC75 /* MobileAppPartB_NicoleFabianUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BBC66D572A33EA24005DFC75 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					BBC66D5E2A33EA24005DFC75 = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+					BBC66D772A33EA26005DFC75 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = BBC66D5E2A33EA24005DFC75;
+					};
+					BBC66D812A33EA26005DFC75 = {
+						CreatedOnToolsVersion = 14.3.1;
+						TestTargetID = BBC66D5E2A33EA24005DFC75;
+					};
+				};
+			};
+			buildConfigurationList = BBC66D5A2A33EA24005DFC75 /* Build configuration list for PBXProject "MobileAppPartB_NicoleFabian" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BBC66D562A33EA24005DFC75;
+			productRefGroup = BBC66D602A33EA24005DFC75 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BBC66D5E2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian */,
+				BBC66D772A33EA26005DFC75 /* MobileAppPartB_NicoleFabianTests */,
+				BBC66D812A33EA26005DFC75 /* MobileAppPartB_NicoleFabianUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BBC66D5D2A33EA24005DFC75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBC66D722A33EA25005DFC75 /* LaunchScreen.storyboard in Resources */,
+				BBC66D6F2A33EA25005DFC75 /* Assets.xcassets in Resources */,
+				BBC66D6A2A33EA24005DFC75 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC66D762A33EA26005DFC75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC66D802A33EA26005DFC75 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BBC66D5B2A33EA24005DFC75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBC66D6D2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodeld in Sources */,
+				BBC66D962A33EE91005DFC75 /* CharacterViewController.swift in Sources */,
+				BBC66D672A33EA24005DFC75 /* ViewController.swift in Sources */,
+				BBC66D632A33EA24005DFC75 /* AppDelegate.swift in Sources */,
+				BBC66D652A33EA24005DFC75 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC66D742A33EA26005DFC75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBC66D7E2A33EA26005DFC75 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BBC66D7A2A33EA26005DFC75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBC66D5E2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian */;
+			targetProxy = BBC66D792A33EA26005DFC75 /* PBXContainerItemProxy */;
+		};
+		BBC66D842A33EA26005DFC75 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBC66D5E2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian */;
+			targetProxy = BBC66D832A33EA26005DFC75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BBC66D682A33EA24005DFC75 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBC66D692A33EA24005DFC75 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BBC66D702A33EA25005DFC75 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BBC66D712A33EA25005DFC75 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BBC66D8A2A33EA26005DFC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BBC66D8B2A33EA26005DFC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BBC66D8D2A33EA26005DFC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MobileAppPartB_NicoleFabian/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MIT.MobileAppPartB-NicoleFabian";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BBC66D8E2A33EA26005DFC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MobileAppPartB_NicoleFabian/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MIT.MobileAppPartB-NicoleFabian";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BBC66D902A33EA26005DFC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MIT.MobileAppPartB-NicoleFabianTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileAppPartB_NicoleFabian.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileAppPartB_NicoleFabian";
+			};
+			name = Debug;
+		};
+		BBC66D912A33EA26005DFC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MIT.MobileAppPartB-NicoleFabianTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MobileAppPartB_NicoleFabian.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MobileAppPartB_NicoleFabian";
+			};
+			name = Release;
+		};
+		BBC66D932A33EA26005DFC75 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MIT.MobileAppPartB-NicoleFabianUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileAppPartB_NicoleFabian;
+			};
+			name = Debug;
+		};
+		BBC66D942A33EA26005DFC75 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "MIT.MobileAppPartB-NicoleFabianUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MobileAppPartB_NicoleFabian;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BBC66D5A2A33EA24005DFC75 /* Build configuration list for PBXProject "MobileAppPartB_NicoleFabian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC66D8A2A33EA26005DFC75 /* Debug */,
+				BBC66D8B2A33EA26005DFC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBC66D8C2A33EA26005DFC75 /* Build configuration list for PBXNativeTarget "MobileAppPartB_NicoleFabian" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC66D8D2A33EA26005DFC75 /* Debug */,
+				BBC66D8E2A33EA26005DFC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBC66D8F2A33EA26005DFC75 /* Build configuration list for PBXNativeTarget "MobileAppPartB_NicoleFabianTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC66D902A33EA26005DFC75 /* Debug */,
+				BBC66D912A33EA26005DFC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BBC66D922A33EA26005DFC75 /* Build configuration list for PBXNativeTarget "MobileAppPartB_NicoleFabianUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBC66D932A33EA26005DFC75 /* Debug */,
+				BBC66D942A33EA26005DFC75 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BBC66D6B2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BBC66D6C2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodel */,
+			);
+			currentVersion = BBC66D6C2A33EA24005DFC75 /* MobileAppPartB_NicoleFabian.xcdatamodel */;
+			path = MobileAppPartB_NicoleFabian.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BBC66D572A33EA24005DFC75 /* Project object */;
+}
