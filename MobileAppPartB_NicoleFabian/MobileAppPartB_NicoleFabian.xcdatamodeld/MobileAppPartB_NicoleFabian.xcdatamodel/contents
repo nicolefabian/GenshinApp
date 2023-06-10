@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21754" systemVersion="22E261" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Character" representedClassName="Character" syncable="YES">
+    <entity name="CharacterData" representedClassName="CharacterData" syncable="YES">
+        <attribute name="card" optional="YES" attributeType="Binary"/>
         <attribute name="constellation" optional="YES" attributeType="String"/>
-        <attribute name="icon" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="vision" optional="YES" attributeType="String"/>
     </entity>

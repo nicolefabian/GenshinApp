@@ -18,7 +18,7 @@ class CharacterViewController: UIViewController {
     
     @IBOutlet weak var searchCharacterTextField: UITextField!
     
-    
+
     @IBOutlet weak var characterNameLabel: UILabel!
     @IBOutlet weak var characterNameTextField: UITextField!
     
@@ -41,11 +41,15 @@ class CharacterViewController: UIViewController {
         
     }
     
+    /*list of characters available in the genshin API
+     
+     ["albedo","aloy","amber","arataki-itto","ayaka","ayato","barbara","beidou","bennett","chongyun","collei","diluc","diona","eula","fischl","ganyu","gorou","hu-tao","jean","kaeya","kazuha","keqing","klee","kokomi","kuki-shinobu","lisa","mona","ningguang","noelle","qiqi","raiden","razor","rosaria","sara","sayu","shenhe","shikanoin-heizou","sucrose","tartaglia","thoma","tighnari","traveler-anemo","traveler-dendro","traveler-electro","traveler-geo","venti","xiangling","xiao","xingqiu","xinyan","yae-miko","yanfei","yelan","yoimiya","yun-jin","zhongli"]
+    */
     @IBAction func searchCharacterButton(_ sender: UIButton) {
         
         let userInput = searchCharacterTextField.text!
         if userInput.isEmpty {
-            showMessage(message: "Search cannot be empty", buttonCaption: "Invalid search", controller: self)
+            showMessage(msg: "Search cannot be empty", controller: self)
             
         } else {
             // Call the fetchCharacterData method
@@ -106,7 +110,7 @@ class CharacterViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.hideElements(hidden: true)
                         // Show alert message on the main queue
-                        self.showMessage(message: "No matching character found", buttonCaption: "Please try again", controller: self)
+                        self.showMessage(msg: "No matching character found", controller: self)
                     }
                 }
             }
@@ -116,30 +120,32 @@ class CharacterViewController: UIViewController {
     
     
     @IBAction func saveCharacterInfoButton(_ sender: UIButton) {
-//        //for coredata implementation
-//        let delegate = UIApplication.shared.delegate as! AppDelegate
-//        //object context to read and write in db
-//        let context = delegate.persistentContainer.viewContext
-//
-//        //for inserting new object
-//        //(forEntityName: "DatabaseName")
-//        let characterData = NSEntityDescription.insertNewObject(forEntityName: "Character", into:context) as! Character
-//        //assigning the values from the coredata to the variables
-//        characterData.name = Name
-//        flickrData.width = Width
-//        flickrData.title = Title
-//
-//        //saving image to binary form
-//        let imageData = imagePicView.image?.pngData()
-//        flickrData.pic = imageData
-//
-//        //saving it to db
-//        do {
-//            try context.save()
-//            print("Data inserted successfully!")
-//        }catch {
-//            print("Data insertion error")
-//        }
+        let formattedSearchedText = searchCharacterTextField.text!.capitalized(with: Locale.current)
+
+        //for coredata implementation
+        let delegate = UIApplication.shared.delegate as! AppDelegate
+        //object context to read and write in db
+        let context = delegate.persistentContainer.viewContext
+
+        //for inserting new object
+        //(forEntityName: "DatabaseName")
+        let character = NSEntityDescription.insertNewObject(forEntityName: "CharacterData", into:context) as! CharacterData
+       // assigning the values from the coredata to the variables
+        character.name = Name
+        character.constellation = Constellation
+        character.vision = Vision
+
+        //saving image to binary form
+        let characterImageData = characterImageView.image?.pngData()
+        character.card = characterImageData
+
+        //saving it to db
+        do {
+            try context.save()
+            showMessage(msg: "\(formattedSearchedText) details are saved successfully", controller: self)
+        }catch {
+            print("Data insertion error")
+        }
     }
     
     
@@ -154,12 +160,13 @@ class CharacterViewController: UIViewController {
         characterImageView.isHidden = hidden
     }
     
-    func showMessage(message: String, buttonCaption: String, controller: UIViewController)
-    {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: buttonCaption, style: .default)
-        alert.addAction(action)
-        controller.present(alert, animated: true)
+    func showMessage (msg: String, controller:UIViewController){
+        let alert = UIAlertController(title: "", message: msg, preferredStyle: .alert);
+        let validateAction = UIAlertAction(title: "OK", style: .default) {
+            action in controller.dismiss(animated: true, completion: nil)
+            }
+        alert.addAction(validateAction)
+        controller.present(alert, animated: true, completion: nil)
     }
 }
 
